@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* =======================================header============================================================= */
+
+/* #header {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    background-color: fuchsia;
+    font-family:'Times New Roman', Times, serif; 
+    font-weight: 200;
+    font-size: large;
+    color: darksalmon;
+} */
+
+/* 
+
+#main-container {
+    background-color: blueviolet;
+    height: 100vh;
+    width: auto;
+} */ 
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fceabb;
+    background: plum;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Cookie image styling with rotation animation */
+#cookie {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    animation: rotateCookie 10s linear infinite;
+    transition: transform 0.2s ease;
+}
+
+/* Cookie hover effect */
+#cookie:hover {
+    transform: scale(1.02);
+}
+
+/* Counter styling */
+#cookie-counter, #cps {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* Upgrade container */
+#upgrades-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Upgrade buttons */
+#upgrades-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: mediumslateblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+#upgrades-container button:hover {
+    background-color: slateblue;
+    transform: scale(1.05);
+}
+
+#upgrades-container button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Rotation animation keyframes */
+@keyframes rotateCookie {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
