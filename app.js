@@ -7,7 +7,7 @@ const cookieCounter = document.getElementById("cookie-counter");
 const cps = document.getElementById("cps");
 const cookie = document.getElementById("cookie");
 const upgradeContainer = document.getElementById("upgrades-container");
-
+const mainContainer = document.getElementById("main-container");
 
 //linking variables to html elements
 
@@ -118,3 +118,19 @@ if (savedState) {
     cookieCounter.innerHTML = cookies;
     cps.innerHTML = cookiesPerSecond;
 }
+
+//solving media querry
+
+//i have created the button but havent given it a name or a display text. textContent
+if(upgradeContainer.style.display === "none") {
+        const btn = document.createElement("button");
+        btn.textContent = "upgrades";
+        mainContainer.appendChild(btn);
+        btn.addEventListener("click", function(){
+            upgradeContainer.style.display = "flex";
+
+        })
+
+
+    }
+

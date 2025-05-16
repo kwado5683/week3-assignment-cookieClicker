@@ -228,3 +228,21 @@ img {
   #upgrades-container button:disabled {
     background-color: grey;
   }  
+
+
+
+  /* //styling for media query  */
+
+  @media (max-width: 768px) {
+    #upgrades-container {
+        align-items: end;
+        justify-content: right;
+        padding: 0;
+        font-size: small;
+        display: none;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    
+  }
