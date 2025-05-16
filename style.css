@@ -240,9 +240,10 @@ img {
         padding: 0;
         font-size: small;
         display: none;
+        margin: 0;
     }
     h1 {
-        font-size: 18px;
+        font-size: 12px;
     }
     
   }
