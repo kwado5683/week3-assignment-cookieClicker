@@ -122,7 +122,8 @@ if (savedState) {
 //solving media querry
 
 //i have created the button but havent given it a name or a display text. textContent
-if(upgradeContainer.style.display === "none") {
+const style = window.getComputedStyle(upgradeContainer)//to be able to check the css media query for upgradeContainer.
+if(style.display === "none" | "") {
         const btn = document.createElement("button");
         btn.textContent = "upgrades";
         mainContainer.appendChild(btn);
