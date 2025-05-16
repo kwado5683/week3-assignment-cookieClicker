@@ -1,6 +1,7 @@
 
 console.log("hello world");
 
+
 //declaring all variables
 const cookieCounter = document.getElementById("cookie-counter");
 const cps = document.getElementById("cps");
@@ -18,7 +19,7 @@ cps.innerHTML = cookiesPerSecond;
 
 //add event to increase cookies on click
 cookie.addEventListener("click",function(){
-    cookies += 1;
+    cookies += 20;
     cookieCounter.innerHTML = cookies;
 })
 
@@ -77,3 +78,43 @@ setInterval(function () {
     cookieCounter.innerHTML = cookies;
   }, 1000); // Every second
 
+
+
+  ///saving stat
+  const save = document.getElementById("save");
+  save.addEventListener("click", function(){
+    const gameState = {
+        cookies: cookies,
+        cookiesPerSecond: cookiesPerSecond
+    };
+    localStorage.setItem('gameState',JSON.stringify(gameState));
+    alert("game saved!");
+
+  })
+
+  //reset stat
+  const reset = document.getElementById("reset");
+  reset.addEventListener("click", function(){
+    if(confirm("Game data will be lost. Are you sure?")){
+        cookies = 0;
+        cookiesPerSecond = 0;
+        localStorage.removeItem("gameState");
+
+        cookieCounter.innerHTML = cookies;
+        cps.innerHTML = cookiesPerSecond
+
+    }
+    
+  });
+
+
+//loading saved game if any
+const savedState = localStorage.getItem("gameState");
+if (savedState) {
+    const gameState = JSON.parse(savedState);
+    cookies = gameState.cookies;
+    cookiesPerSecond = gameState.cookiesPerSecond;
+
+    cookieCounter.innerHTML = cookies;
+    cps.innerHTML = cookiesPerSecond;
+}

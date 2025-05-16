@@ -1,100 +1,230 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-/* =======================================header============================================================= */
 
-/* #header {
-    width: 100%;
+
+
+#header {
+    background-color: darkslateblue;
+    height:10vh;
     text-align: center;
-    height: 40px;
-    background-color: fuchsia;
-    font-family:'Times New Roman', Times, serif; 
-    font-weight: 200;
-    font-size: large;
-    color: darksalmon;
-} */
-
-/* 
+    padding-top: 20px;
+    color: aliceblue;
+    font-family:sans-serif;
+    font-size: medium;
+     
+}
 
 #main-container {
+    display: flex;
+    justify-content: space-between;
     background-color: blueviolet;
     height: 100vh;
-    width: auto;
-} */ 
-
-/* General body styling */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fceabb;
-    background: plum;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
 }
 
-/* Cookie image styling with rotation animation */
-#cookie {
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-    animation: rotateCookie 10s linear infinite;
-    transition: transform 0.2s ease;
-}
-
-/* Cookie hover effect */
-#cookie:hover {
-    transform: scale(1.02);
-}
-
-/* Counter styling */
-#cookie-counter, #cps {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-/* Upgrade container */
-#upgrades-container {
-    margin-top: 30px;
+#game-stat{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-top: 40px;
 }
 
-/* Upgrade buttons */
-#upgrades-container button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: mediumslateblue;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+#save {
+    border-radius: 10px;
+    size: 40px;
+    background-color: green;
+}
+
+#reset {
+    border-radius: 10px;
+    size: 40px;
+    background-color: red;
+}
+
+#Cookie-container{
+    display: block;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+img {
+    background-color: transparent;
+    background-image: none;
+}
+
+#upgrades-container{
+    display: flex;
+    justify-content:flex-end;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+    
+}
+
+#Auto-Clicker {
+    background-color: blue;
+    color:aliceblue
+}   */
+
+
+
+
+
+/* new styling */
+/* Base styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #fff9f0, #ffe0b2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    color: #4e342e;
+  }
+  
+  /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: #f3e5f5;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  #header {
+    background-color: #4b0082;
+    height: 10vh;
+    /* text-align: center; */
+    padding: 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    margin-left: 35%;
+  }
+  
+  /* Main container layout */
+  #main-container {
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    background-color: #7e57c2;
+    padding: 2rem;
+  }
+  
+  /* Game stats column (left side) */
+  #game-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 30px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  #save {
+    border-radius: 10px;
+    size: 40px;
+    background-color: green;
+
+}
+#save:hover {
     cursor: pointer;
+    transform: scale(1.08);
+
 }
 
-#upgrades-container button:hover {
-    background-color: slateblue;
+#reset {
+    border-radius: 10px;
+    size: 40px;
+    background-color: red;
+}
+#reset:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+
+}
+  
+  /* Cookie container (center) */
+  #Cookie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  #cookie {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 100px;
+  }
+  
+  #cookie:hover {
     transform: scale(1.05);
-}
-
-#upgrades-container button:disabled {
-    background-color: gray;
-    cursor: not-allowed;
-}
-
-/* Rotation animation keyframes */
-@keyframes rotateCookie {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+  }
+  
+  #cookie:active {
+    transform: scale(0.95);
+  }
+  
+  /* Upgrade section (right side) */
+  #upgrades-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 5px;
+    padding-bottom: 30px;
+    align-items: center;
+    width: 250px;
+    color:aliceblue;
+    
+    
+  }
+  
+  #upgrades-container button {
+    background-color: #fff3e0;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    padding: 0.8rem;
+    width: 100%;
+    color: #4e342e;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #upgrades-container button:hover {
+    background-color: palevioletred;
+  }
+  
+  #upgrades-container button:disabled {
+    background-color: grey;
+  }  
