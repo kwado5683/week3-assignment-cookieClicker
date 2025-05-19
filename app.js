@@ -119,19 +119,22 @@ if (savedState) {
     cps.innerHTML = cookiesPerSecond;
 }
 
-//solving media querry
+//solving media query
 
 //i have created the button but havent given it a name or a display text. textContent
-const style = window.getComputedStyle(upgradeContainer)//to be able to check the css media query for upgradeContainer.
-if(style.display === "none" | "") {
-        const btn = document.createElement("button");
-        btn.textContent = "upgrades";
-        mainContainer.appendChild(btn);
-        btn.addEventListener("click", function(){
+const style = window.getComputedStyle(upgradeContainer);
+if (style.display === "none" || style.display === "") {
+    const btn = document.createElement("button");
+    btn.textContent = "Upgrades";
+    btn.id = "mediaBtn";
+    mainContainer.appendChild(btn);
+    
+    btn.addEventListener("click", function () {
+        if (upgradeContainer.style.display === "none" || upgradeContainer.style.display === "") {
             upgradeContainer.style.display = "flex";
-
-        })
-
-
-    }
+        } else {
+            upgradeContainer.style.display = "none";
+        }
+    });
+}
 

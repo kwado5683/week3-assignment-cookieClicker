@@ -245,5 +245,11 @@ img {
     h1 {
         font-size: 12px;
     }
+
+    #mediaBtn {
+        size: 30px;
+        position: absolute;
+        background-color: orangered;
+    }
     
   }
